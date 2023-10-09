@@ -1,0 +1,265 @@
+﻿html, body {
+    background-color: #ffc82f;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+
+header {
+    height: 80px;
+    width: 800px;
+    margin: 5px auto;
+    color: saddlebrown;
+    background: url(imgs/logo.png) no-repeat;
+    background-size: contain;
+}
+
+    header h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 50pt;
+        margin-left: 160px;
+        text-align: center;
+    }
+
+        header h1 a {
+            text-decoration: none;
+            color: saddlebrown;
+        }
+
+main, .main, #main {
+    margin: 10px auto;
+    width: 990px;
+    display: block;
+    border-radius: 10px;
+    background-color: white;
+    padding: 15px 30px;
+    font-family: Tahoma;
+    overflow:hidden;
+}
+
+.nav {
+    height: 40px;
+    border-bottom: 1px solid #247eb0;
+}
+
+    .nav  h3 {
+        color: #247eb0;
+        margin: 5px 0;
+        float: left;
+        width: 200px;
+    }
+
+    .nav nav {
+        width:calc(100% - 200px);
+        float: right;
+        margin: 0;
+        padding: 0;
+        text-align:right;
+    }
+
+        .nav ul li {
+            float: left;
+        }
+
+            .nav nav a {
+                display:inline-block;
+                padding: 5px 7px;
+                height: 25px;
+                background-color: #247eb0;
+                color: white;
+                margin: 0;
+                font-family: Tahoma;
+                font-size: 12pt;
+                text-align: center;
+                line-height: 25px;
+                text-decoration: none;
+            }
+
+                .nav nav a:hover {
+                    color: #ffc82f;
+                }
+
+            .nav ul li input[type=search] {
+                padding: 3px 3px 3px 25px;
+                margin: 5px 0;
+                width: 300px;
+            }
+
+                .nav ul li input[type=search]:empty {
+                    background: url(imgs/search.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+
+.list {
+    margin: 15px 0;
+}
+
+    .list ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .list li {
+        width: 150px;
+        float: left;
+        margin: 0 18px 18px 0;
+        height: 130px;
+        text-align: center;
+    }
+
+        .list li:nth-child(6n) {
+            margin-right: 0;
+        }
+
+    .list a {
+        text-decoration: none;
+        color: #247eb0;
+        font-size: 10pt;
+    }
+
+    .list li img {
+        width: 150px;
+        max-width: 140px;
+        max-height: 80px;
+        overflow: hidden;
+        border: 5px solid white;
+        outline: 2px solid gainsboro;
+    }
+
+footer {
+    background-color: #f1b30f;
+    height: 50px;
+    border-top: 1px groove lightgray;
+    font-size: smaller;
+    text-align: center;
+    font-style: italic;
+    line-height: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
+
+.main h2 {
+    clear:both;
+    border-radius: 10px;
+    background-color: #247eb0;
+    color: white;
+    margin: 5px 0;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+}
+.main h4 {
+    clear: both;
+    font-size: x-large;
+    color: #247eb0;
+    margin: 5px 0;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.descripcion {
+    width: 500px;
+    height: 300px;
+    float: left;
+    margin: 5px 0;
+    text-align: justify;
+    overflow: auto;
+    padding: 0 10px 0 0;
+}
+
+
+.galeria {
+    float: right;
+    width: 450px;
+    height: 300px;
+    margin: 5px 0;
+}
+
+
+.datos, .estadisticas, .fisicas {
+    float: left;
+    width: 320px;
+    height: 200px;
+    margin: 0 20px;
+    font-size: small;
+}
+
+.datos, .fisicas {
+    width: 220px;
+}
+
+
+.estadisticas {
+    width: 420px;
+}
+
+section label {
+    color: #247eb0;
+    font-weight: bold;
+}
+
+
+section span {
+    width: 170px;
+    height: 30px;
+}
+
+.estadisticas img {
+    width: 220px;
+    height: 15px;
+    float: right;
+}
+
+.main .button {
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: #247eb0;
+    color: white;
+    margin: 5px auto;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    width: 120px;
+    display: block;
+}
+
+.otrosPerros {
+    margin-top: 40px;
+    font-size: smaller;
+}
+
+    .otrosPerros h2 {
+        font-size: smaller;
+        border-radius: 0;
+        margin: 2px 0;
+    }
+
+    .otrosPerros a {
+        display: block;
+        width: 230px;
+        float: left;
+        margin-right: 17px;
+        text-decoration: none;
+        color: black;
+        height: 200px;
+        overflow: hidden;
+    }
+
+        .otrosPerros a:last-child {
+            margin: 0;
+        }
+
+        .otrosPerros a img {
+            width: 100%;
+        }

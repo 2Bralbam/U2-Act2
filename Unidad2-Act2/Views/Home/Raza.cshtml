@@ -1,0 +1,73 @@
+﻿@model Unidad2_Act2.Models.ViewModels.RazaViewModel;
+@{
+    Layout = "Layout";
+}
+<h2 id="nombre">@Model.Perro.Nombre</h2>
+
+<section class="descripcion" id="descripcion">
+    @Model.Perro.Descripcion
+</section>
+
+<section class="galeria">
+    <img id="fotoPerro" src="~/imgs_perros/@(Model.Perro.Id)_0.jpg" />
+</section>
+
+<section class="datos">
+    <h3>Datos</h3>
+    <label>Otros nombres: </label>
+    <span id="otrosNombre">@Model.Perro.OtrosNombres</span>
+    <br />
+    <label>País de Origen: </label>
+    <span id="pais">@Model.Perro.IdPaisNavigation.Nombre</span>
+    <br />
+    <label>Peso: </label>
+    <span id="peso">@(Model.Perro.PesoMin)kg - @(Model.Perro.PesoMax)kg</span>
+    <br />
+    <label>Altura: </label>
+    <span id="altura">@(Model.Perro.AlturaMin)cm - @(@Model.Perro.AlturaMax)cm</span>
+    <br />
+    <label>Esperanza de Vida: </label>
+    <span id="vida">@Model.Perro.EsperanzaVida</span>
+    <br />
+</section>
+<section class="estadisticas">
+    <h3>Estadísticas</h3>
+    <label>Nivel de Energía:</label><img src="~/imgs/nivel@(Model.Perro.Estadisticasraza != null ? Model.Perro.Estadisticasraza.NivelEnergia : 0).png" /><br />
+    <label>Facilidad de Entrenamiento:</label><img src="~/imgs/nivel@(Model.Perro.Estadisticasraza != null ? Model.Perro.Estadisticasraza.FacilidadEntrenamiento : 0).png" /><br />
+    <label>Ejercicio Obligatorio:</label><img src="~/imgs/nivel@(Model.Perro.Estadisticasraza != null ? Model.Perro.Estadisticasraza.EjercicioObligatorio : 0).png" /><br />
+    <label>Amistad con Desconocidos:</label><img src="~/imgs/nivel@(Model.Perro.Estadisticasraza != null ? Model.Perro.Estadisticasraza.AmistadDesconocidos : 0).png" /><br />
+    <label>Amistad con Perros:</label><img src="~/imgs/nivel@(Model.Perro.Estadisticasraza != null ? Model.Perro.Estadisticasraza.AmistadPerros : 0).png" /><br />
+    <label>Necesidad de Cepillado:</label><img src="~/imgs/nivel@(Model.Perro.Estadisticasraza != null ? Model.Perro.Estadisticasraza.NecesidadCepillado : 0).png" />
+</section>
+<section class="fisicas">
+    <h3>Caracteristicas Físicas</h3>
+    <label>Patas: </label>
+    <span id="patas"> @(Model.Perro.Caracteristicasfisicas != null ? Model.Perro.Caracteristicasfisicas.Patas : " ")</span>
+    <br />
+    <label>Cola: </label>
+    <span id="cola"> @(Model.Perro.Caracteristicasfisicas != null ? Model.Perro.Caracteristicasfisicas.Cola : " ")</span>
+    <br />
+    <label>Hocico: </label>
+    <span id="hocico">@(Model.Perro.Caracteristicasfisicas != null ? Model.Perro.Caracteristicasfisicas.Hocico : " ")</span>
+    <br />
+    <label>Pelo: </label>
+    <span id="pelo">@(Model.Perro.Caracteristicasfisicas != null ? Model.Perro.Caracteristicasfisicas.Pelo : " ")</span>
+    <br />
+    <label>Color: </label>
+    <span id="color">@(Model.Perro.Caracteristicasfisicas != null ? Model.Perro.Caracteristicasfisicas.Color : " ")</span>
+</section>
+<br class="clear" />
+
+<a href="javascript:history.back();" class="button">Regresar</a>
+
+<section class="otrosPerros">
+    @for (int i = 0; i < 4; i++)
+    {
+        Random rand = new Random();
+        var Perro = Model.PerrosAleatorios[rand.Next(0, Model.PerrosAleatorios.Count())];
+        <a href="~/Raza/@Perro.Nombre.Replace(" ","-")">
+            <img src="~/imgs_perros/@(Perro.Id)_0.jpg" />
+            <h2>@Perro.Nombre</h2>
+        </a>
+    }
+</section>

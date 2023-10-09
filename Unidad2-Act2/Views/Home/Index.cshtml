@@ -1,0 +1,30 @@
+﻿@model Unidad2_Act2.Models.ViewModels.IndexViewModel;
+@{
+    Layout = "Layout";
+}
+
+<section class="nav">
+    <h3>ABC de Razas</h3>
+    <nav>
+        <a href="~/">Todas</a>
+        @foreach(var FiltroLetra in Model.FiltroLetras)
+        {
+            <a href="~/?Id=@FiltroLetra">@FiltroLetra</a>
+        }
+        
+        <a href="~/Pais">Listado por país</a>
+    </nav>
+</section>
+<section class="list">
+    <ul>
+        @foreach(var Perro in Model.Perros)
+        {
+            <li>
+                <a href="~/Raza/@Perro.Nombre.Replace(" ","-")">
+                    <img src="~/imgs_perros/@(Perro.Id)_0.jpg">
+                    @Perro.Nombre
+                </a>
+            </li>
+        }
+    </ul>
+</section>
